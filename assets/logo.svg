@@ -1,0 +1,8 @@
+<svg width="620" height="180" viewBox="0 0 620 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="620" height="180" fill="white"/>
+  <path d="M60 92C140 58 250 48 360 54C425 58 500 74 560 92" stroke="#000000" stroke-width="6" stroke-linecap="round"/>
+  <path d="M58 88C40 86 26 80 16 70" stroke="#E10600" stroke-width="6" stroke-linecap="round"/>
+  <path d="M562 90C582 88 596 82 606 72" stroke="#E10600" stroke-width="6" stroke-linecap="round"/>
+  <text x="90" y="120" font-family="'Montserrat', 'Inter', 'Arial', sans-serif" font-size="64" font-weight="700" fill="#000000" letter-spacing="4">ORNK AVTO</text>
+  <text x="120" y="155" font-family="'Montserrat', 'Inter', 'Arial', sans-serif" font-size="20" font-weight="600" fill="#E10600" letter-spacing="2">STROKOVNI PREGLED RABLJENIH VOZIL</text>
+</svg>

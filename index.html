@@ -2,11 +2,18 @@
 <html lang="sl">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>OrnkAvto – Mojster za pregled rabljenih vozil</title>
     <meta
       name="description"
       content="OrnkAvto nudi strokoven pregled rabljenih vozil, diagnostiko napak in pogajanje za boljšo ceno. Hitro, pregledno in brez tveganja."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
     />
     <link rel="stylesheet" href="assets/style.css" />
   </head>
@@ -14,8 +21,7 @@
     <header class="site-header">
       <div class="container header-inner">
         <div class="brand">
-          <span class="brand-mark">OrnkAvto</span>
-          <span class="brand-tagline">Strokoven pregled rabljenih vozil</span>
+          <img class="brand-logo" src="assets/ornkavto-logo.png" alt="OrnkAvto logo" />
         </div>
         <nav class="nav">
           <a href="#domov">Domov</a>
@@ -23,7 +29,7 @@
           <a href="#o-nas">O nas</a>
           <a href="#kontakt">Kontakt</a>
         </nav>
-        <a class="cta-button" href="#kontakt">Kontaktiraj nas</a>
+        <a class="cta-button" href="#kontakt">Oddaj podatke o vozilu</a>
       </div>
     </header>
 
@@ -31,15 +37,15 @@
       <section id="domov" class="hero">
         <div class="container hero-inner">
           <div>
-            <p class="eyebrow">Zanesljiv partner pri nakupu rabljenega vozila</p>
+            <p class="kicker">Zanesljiv partner pri nakupu rabljenega vozila</p>
             <h1>Ne kupujte avtomobila na slepo – OrnkAvto pregleda namesto vas.</h1>
             <p class="hero-text">
               Prihranite čas, denar in živce. Opravimo temeljit pregled vozila, izpišemo skrite
               napake, preizkusimo vožnjo in se pogajamo za boljšo ceno.
             </p>
             <div class="hero-actions">
-              <a class="cta-button" href="#kontakt">Pošlji povpraševanje</a>
-              <a class="ghost-button" href="#storitve">Izvedi več</a>
+              <a class="cta-button" href="#kontakt">Oddaj podatke o vozilu</a>
+              <a class="ghost-button" href="#storitve">Kako poteka</a>
             </div>
             <div class="hero-highlights">
               <div>
@@ -56,14 +62,14 @@
               </div>
             </div>
           </div>
-          <div class="hero-card">
+          <div class="hero-card report">
             <h2>Zakaj OrnkAvto?</h2>
             <ul>
               <li>Pregled rabljenega vozila brez tveganja.</li>
               <li>Izkušnje z mehaniko in avtodiagnostiko.</li>
               <li>Jasen nasvet, ali je nakup smiseln.</li>
             </ul>
-            <p class="note">Delujemo po Sloveniji, po dogovoru tudi širše.</p>
+            <p class="note badge">Delujemo po Sloveniji, po dogovoru tudi širše.</p>
           </div>
         </div>
       </section>
@@ -71,17 +77,35 @@
       <section class="summary" aria-label="Povzetek storitev">
         <div class="container summary-grid">
           <article>
-            <span class="icon">🛠️</span>
+            <span class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M4 15l1-4 3-3h8l3 3 1 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M7 15h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                <circle cx="8" cy="16.5" r="1.5" stroke="currentColor" stroke-width="1.5" />
+                <circle cx="16" cy="16.5" r="1.5" stroke="currentColor" stroke-width="1.5" />
+              </svg>
+            </span>
             <h3>Pregled karoserije</h3>
             <p>Merjenje debeline laka za odkrivanje skritih popravil.</p>
           </article>
           <article>
-            <span class="icon">💻</span>
+            <span class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <rect x="5" y="6" width="14" height="12" rx="2" stroke="currentColor" stroke-width="1.5" />
+                <path d="M8 9h8M8 12h8M8 15h5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+              </svg>
+            </span>
             <h3>Računalniška diagnostika</h3>
             <p>OBD izpis napak, elektronike in servisnih intervalov.</p>
           </article>
           <article>
-            <span class="icon">🤝</span>
+            <span class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M7 7h10v10H7z" stroke="currentColor" stroke-width="1.5" />
+                <path d="M9 12h6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                <path d="M12 9v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+              </svg>
+            </span>
             <h3>Pogajanje za ceno</h3>
             <p>Najdene napake uporabimo za nižjo nakupno ceno.</p>
           </article>
@@ -109,27 +133,27 @@
           <div class="steps">
             <article>
               <span class="step-number">1</span>
-              <h3>Kontakt</h3>
-              <p>Pokličite ali pošljite povpraševanje z opisom vozila.</p>
+              <h3>Oddaš podatke</h3>
+              <p>Pošlješ oglas ali na kratko opišeš, kaj iščeš.</p>
             </article>
             <article>
               <span class="step-number">2</span>
-              <h3>Ogled na terenu</h3>
-              <p>OrnkAvto opravi celoten pregled vozila namesto vas.</p>
+              <h3>Pokličemo te</h3>
+              <p>Hitro uskladimo, ali potrebuješ svetovanje, pregled oglasov ali ogled.</p>
             </article>
             <article>
               <span class="step-number">3</span>
-              <h3>Poročilo</h3>
-              <p>Prejmete jasno priporočilo in pomoč pri pogajanjih.</p>
+              <h3>Izvedemo pregled / poročilo</h3>
+              <p>Opravimo pregled na terenu in dobiš jasno priporočilo + pomoč pri pogajanju.</p>
             </article>
           </div>
 
           <div class="cta-banner">
             <div>
-              <h3>Ste našli avto, ki vas zanima?</h3>
-              <p>Pokličite za informacijo o ceni pregleda in prostih terminih.</p>
+              <h3>Oddaj podatke. Jaz te pokličem.</h3>
+              <p>Svetovanje, pregled oglasov ali ogled na terenu — glede na tvojo situacijo.</p>
             </div>
-            <a class="cta-button" href="#kontakt">Kontaktiraj nas</a>
+            <a class="cta-button" href="#kontakt">Oddaj podatke o vozilu</a>
           </div>
         </div>
       </section>
@@ -168,8 +192,8 @@
       <section id="kontakt" class="section contact">
         <div class="container contact-grid">
           <div>
-            <h2>Kontakt</h2>
-            <p>Za vprašanja ali hitro povpraševanje nas kontaktirajte.</p>
+            <h2>Oddaj podatke o vozilu</h2>
+            <p>Po oddaji te pokličemo in skupaj določimo naslednji korak. Odgovorimo običajno v 24 urah.</p>
             <div class="contact-details">
               <p><strong>Telefon:</strong> <a href="tel:+38640123456">+386 40 123 456</a></p>
               <p><strong>Email:</strong> <a href="mailto:info@ornkavto.si">info@ornkavto.si</a></p>
@@ -178,24 +202,79 @@
             <p class="note">Odgovorimo najkasneje v 24 urah.</p>
           </div>
           <form class="contact-form" action="#" method="post">
-            <label>
-              Ime in priimek
-              <input type="text" name="name" placeholder="Vaše ime" required />
-            </label>
-            <label>
-              E-naslov
-              <input type="email" name="email" placeholder="vas@email.com" required />
-            </label>
-            <label>
-              Telefonska številka (neobvezno)
-              <input type="tel" name="phone" placeholder="040 123 456" />
-            </label>
-            <label>
-              Sporočilo
-              <textarea name="message" rows="4" placeholder="Opišite vozilo in vprašanja" required></textarea>
-            </label>
-            <button type="submit">Pošlji povpraševanje</button>
-            <p class="form-note">Obrazec je pripravljen za priklop na pošiljanje e-pošte.</p>
+            <div class="form-grid">
+              <div class="form-col form-col--primary">
+                <h3>Kontaktni podatki</h3>
+
+                <label>
+                  Ime in priimek
+                  <input type="text" name="name" placeholder="Vaše ime" />
+                </label>
+
+                <label>
+                  Telefon *
+                  <input type="tel" name="phone" placeholder="040 123 456" required />
+                </label>
+
+                <p class="form-hint">Po oddaji vas pokličemo in skupaj določimo naslednji korak.</p>
+              </div>
+
+              <div class="form-col form-col--secondary">
+                <h3>Dodatni podatki (neobvezno)</h3>
+
+                <label>
+                  Kaj želiš?
+                  <select name="need">
+                    <option value="">Izberi</option>
+                    <option value="svetovanje">Svetovanje pri izbiri vozila</option>
+                    <option value="pregled-oglasov">Pregled oglasov</option>
+                    <option value="ogled">Ogled na terenu</option>
+                  </select>
+                </label>
+
+                <label>
+                  Namen vozila
+                  <select name="purpose">
+                    <option value="">Izberi</option>
+                    <option value="druzinski">Družinski</option>
+                    <option value="sluzbeni">Službeni</option>
+                    <option value="mestni">Mestni</option>
+                    <option value="sportni">Športni</option>
+                    <option value="suv">SUV / teren</option>
+                  </select>
+                </label>
+
+                <label>
+                  Budget
+                  <select name="budget">
+                    <option value="">Izberi</option>
+                    <option value="do5">Do 5.000 €</option>
+                    <option value="5-10">5–10.000 €</option>
+                    <option value="10-15">10–15.000 €</option>
+                    <option value="15-25">15–25.000 €</option>
+                    <option value="25plus">25.000 €+</option>
+                  </select>
+                </label>
+
+                <label>
+                  Povezava do oglasa
+                  <input type="url" name="adlink" placeholder="https://..." />
+                </label>
+
+                <label>
+                  Dodatno
+                  <textarea name="message" rows="3" placeholder='Npr. "želimo karavana, avtomatik, do 170k km"'></textarea>
+                </label>
+              </div>
+            </div>
+
+            <div class="form-footer">
+              <button class="btn btn-primary" type="submit">Pošlji podatke</button>
+              <p class="form-note">Po oddaji vas pokličemo in predlagamo najboljšo možnost.</p>
+              <p class="form-success" role="status" aria-live="polite" hidden>
+                Hvala. Pokličemo te v najkrajšem času.
+              </p>
+            </div>
           </form>
         </div>
       </section>
@@ -216,5 +295,18 @@
         </div>
       </div>
     </footer>
+    <script>
+      const form = document.querySelector(".contact-form");
+      if (form) {
+        form.addEventListener("submit", (event) => {
+          event.preventDefault();
+          const success = form.querySelector(".form-success");
+          if (success) {
+            success.hidden = false;
+          }
+          form.reset();
+        });
+      }
+    </script>
   </body>
 </html>

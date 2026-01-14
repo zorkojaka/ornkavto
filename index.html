@@ -191,9 +191,17 @@
 
       <section id="kontakt" class="section contact">
         <div class="container contact-grid">
-          <div>
+          <div class="contact-copy">
             <h2>Oddaj podatke o vozilu</h2>
-            <p>Po oddaji te pokličemo in skupaj določimo naslednji korak. Odgovorimo običajno v 24 urah.</p>
+            <p>
+              Vpiši osnovne podatke in pokličemo te z jasnim naslednjim korakom. Odgovorimo običajno
+              v 24 urah.
+            </p>
+            <ul class="contact-points">
+              <li>Hitro preverimo situacijo in svetujemo.</li>
+              <li>Po dogovoru naredimo pregled oglasov ali ogled.</li>
+              <li>Dobite jasno priporočilo in pomoč pri pogajanjih.</li>
+            </ul>
             <div class="contact-details">
               <p><strong>Telefon:</strong> <a href="tel:+38640123456">+386 40 123 456</a></p>
               <p><strong>Email:</strong> <a href="mailto:info@ornkavto.si">info@ornkavto.si</a></p>
@@ -201,81 +209,97 @@
             </div>
             <p class="note">Odgovorimo najkasneje v 24 urah.</p>
           </div>
-          <form class="contact-form" action="#" method="post">
-            <div class="form-grid">
-              <div class="form-col form-col--primary">
-                <h3>Kontaktni podatki</h3>
+          <div class="contact-wrapper">
+            <form
+              id="contactForm"
+              class="contact-form"
+              action="mailto:info@ornkavto.si?subject=Nova%20oddaja%20%E2%80%93%20OrnkAvto"
+              method="post"
+              enctype="text/plain"
+            >
+              <input type="hidden" name="Nova oddaja preko spletne strani OrnkAvto" value=" " />
+              <input type="hidden" name="Kontakt" value=" " />
+              <input type="hidden" name="Dodatni podatki" value=" " />
+              <input type="hidden" name="Oddano preko" value="ornkavto.si" />
+              <div class="form-grid">
+                <div class="form-col form-col--primary">
+                  <h3>Kontaktni podatki</h3>
 
-                <label>
-                  Ime in priimek
-                  <input type="text" name="name" placeholder="Vaše ime" />
-                </label>
+                  <label>
+                    Ime in priimek
+                    <input type="text" name="Ime" placeholder="Vaše ime" />
+                  </label>
 
-                <label>
-                  Telefon *
-                  <input type="tel" name="phone" placeholder="040 123 456" required />
-                </label>
+                  <label>
+                    Telefon *
+                    <input type="tel" name="Telefon" placeholder="040 123 456" required />
+                  </label>
 
-                <p class="form-hint">Po oddaji vas pokličemo in skupaj določimo naslednji korak.</p>
+                  <button type="submit" name="submitType" value="kontakt" class="btn btn-primary btn-full">
+                    Pošlji samo kontakt
+                  </button>
+
+                  <p class="form-hint">Dovolj je telefon. Dodatni podatki so neobvezni.</p>
+                </div>
+
+                <div class="form-col form-col--secondary">
+                  <h3>Dodatni podatki <span class="muted">(neobvezno)</span></h3>
+
+                  <label>
+                    Kaj želiš?
+                    <select name="Kaj želiš">
+                      <option value="">Izberi</option>
+                      <option>Svetovanje pri izbiri vozila</option>
+                      <option>Pregled oglasov</option>
+                      <option>Ogled na terenu</option>
+                    </select>
+                  </label>
+
+                  <label>
+                    Namen vozila
+                    <select name="Namen vozila">
+                      <option value="">Izberi</option>
+                      <option>Družinski</option>
+                      <option>Službeni</option>
+                      <option>Mestni</option>
+                      <option>Športni</option>
+                      <option>SUV / teren</option>
+                    </select>
+                  </label>
+
+                  <label>
+                    Budget
+                    <select name="Budget">
+                      <option value="">Izberi</option>
+                      <option>Do 5.000 €</option>
+                      <option>5–10.000 €</option>
+                      <option>10–15.000 €</option>
+                      <option>15–25.000 €</option>
+                      <option>25.000 €+</option>
+                    </select>
+                  </label>
+
+                  <label>
+                    Povezava do oglasa
+                    <input type="url" name="Povezava do oglasa" placeholder="https://..." />
+                  </label>
+
+                  <label>
+                    Dodatno
+                    <textarea name="Opombe" rows="3" placeholder='Npr. "želimo karavana, avtomatik, do 170k km"'></textarea>
+                  </label>
+                </div>
               </div>
 
-              <div class="form-col form-col--secondary">
-                <h3>Dodatni podatki (neobvezno)</h3>
+              <div class="form-footer">
+                <button type="submit" name="submitType" value="vse" class="btn btn-secondary btn-full">
+                  Pošlji vse podatke
+                </button>
 
-                <label>
-                  Kaj želiš?
-                  <select name="need">
-                    <option value="">Izberi</option>
-                    <option value="svetovanje">Svetovanje pri izbiri vozila</option>
-                    <option value="pregled-oglasov">Pregled oglasov</option>
-                    <option value="ogled">Ogled na terenu</option>
-                  </select>
-                </label>
-
-                <label>
-                  Namen vozila
-                  <select name="purpose">
-                    <option value="">Izberi</option>
-                    <option value="druzinski">Družinski</option>
-                    <option value="sluzbeni">Službeni</option>
-                    <option value="mestni">Mestni</option>
-                    <option value="sportni">Športni</option>
-                    <option value="suv">SUV / teren</option>
-                  </select>
-                </label>
-
-                <label>
-                  Budget
-                  <select name="budget">
-                    <option value="">Izberi</option>
-                    <option value="do5">Do 5.000 €</option>
-                    <option value="5-10">5–10.000 €</option>
-                    <option value="10-15">10–15.000 €</option>
-                    <option value="15-25">15–25.000 €</option>
-                    <option value="25plus">25.000 €+</option>
-                  </select>
-                </label>
-
-                <label>
-                  Povezava do oglasa
-                  <input type="url" name="adlink" placeholder="https://..." />
-                </label>
-
-                <label>
-                  Dodatno
-                  <textarea name="message" rows="3" placeholder='Npr. "želimo karavana, avtomatik, do 170k km"'></textarea>
-                </label>
+                <p class="form-note">Po oddaji vas pokličemo in predlagamo najboljšo možnost.</p>
               </div>
-            </div>
-
-            <div class="form-footer">
-              <button class="btn btn-primary" type="submit">Pošlji podatke</button>
-              <p class="form-note">Po oddaji vas pokličemo in predlagamo najboljšo možnost.</p>
-              <p class="form-success" role="status" aria-live="polite" hidden>
-                Hvala. Pokličemo te v najkrajšem času.
-              </p>
-            </div>
-          </form>
+            </form>
+          </div>
         </div>
       </section>
     </main>
@@ -291,22 +315,9 @@
           <p><a href="mailto:info@ornkavto.si">info@ornkavto.si</a></p>
         </div>
         <div>
-          <p>© 2024 OrnkAvto. Vse pravice pridržane.</p>
+          <p>© 2026 OrnkAvto. Vse pravice pridržane.</p>
         </div>
       </div>
     </footer>
-    <script>
-      const form = document.querySelector(".contact-form");
-      if (form) {
-        form.addEventListener("submit", (event) => {
-          event.preventDefault();
-          const success = form.querySelector(".form-success");
-          if (success) {
-            success.hidden = false;
-          }
-          form.reset();
-        });
-      }
-    </script>
   </body>
 </html>

@@ -729,12 +729,53 @@ a {
 }
 
 @media (max-width: 768px) {
+  .site-header,
+  .header-inner {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .brand {
+    align-items: center;
+  }
+
+  .nav {
+    justify-content: center;
+  }
+
+  .cta-button {
+    margin: 12px auto 0;
+  }
+
   .hero-grid {
     grid-template-columns: 1fr;
   }
 
+  .hero {
+    text-align: center;
+  }
+
+  .hero-text {
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero h1,
+  .hero p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .hero-cta {
     flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-cta .btn {
+    width: 100%;
+    max-width: 320px;
   }
 
   .services-flow {

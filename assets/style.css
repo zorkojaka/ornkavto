@@ -748,6 +748,22 @@ a {
   .service-media--double {
     grid-template-columns: 1fr;
   }
+
+  .cta-banner {
+    grid-template-columns: 1fr;
+    text-align: center;
+    justify-items: center;
+  }
+
+  .cta-banner .cta-arrow {
+    display: none;
+  }
+
+  .cta-banner .cta-button {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 320px;
+  }
 }
 
 @media (max-width: 600px) {

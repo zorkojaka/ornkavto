@@ -134,6 +134,66 @@ a {
   align-items: start;
 }
 
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  font-size: 1.125rem;
+  color: #444444;
+  margin-bottom: 1.5rem;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 16px;
+}
+
+.btn {
+  padding: 0.75rem 1.2rem;
+  border-radius: var(--radius);
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+}
+
+.btn-primary {
+  background: var(--brand);
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background: var(--brand-hover);
+}
+
+.btn-secondary {
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text);
+}
+
+.btn-secondary:hover {
+  background: var(--muted);
+}
+
+.hero-image img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  height: auto;
+}
+
 .kicker {
   text-transform: uppercase;
   letter-spacing: 0.12em;
@@ -316,19 +376,67 @@ a {
 }
 
 .cta-banner {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto auto auto;
   align-items: center;
-  justify-content: space-between;
-  gap: 1.5rem;
-  padding: 2rem;
+  justify-content: center;
+  column-gap: 1.5rem;
+  padding: 2rem 3rem;
   border-radius: var(--radius);
   background: #0b0d12;
   color: #ffffff;
 }
 
-.cta-banner p {
-  color: #d1d5db;
+.cta-banner div {
+  flex: 0 1 auto;
+  text-align: center;
 }
+
+.cta-banner h3 {
+  font-size: clamp(1.4rem, 2vw, 1.8rem);
+  margin-bottom: 0.4rem;
+  color: #ffffff;
+}
+
+.cta-banner p {
+  font-size: 1.05rem;
+  color: #e5e7eb;
+  margin: 0;
+}
+
+.cta-arrow {
+  position: relative;
+  width: 70px;
+  height: 16px;
+  margin: 0 2rem;
+  flex: 0 0 auto;
+}
+
+.cta-arrow::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 18px;
+  height: 4px;
+  background: #ffffff;
+  border-radius: 999px;
+  transform: translateY(-50%);
+}
+
+.cta-arrow::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 18px solid #ffffff;
+}
+
 
 .about-grid {
   display: grid;
@@ -567,6 +675,16 @@ a {
 
   .contact-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-cta {
+    flex-direction: column;
   }
 }
 

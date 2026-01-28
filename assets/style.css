@@ -702,6 +702,31 @@ a {
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1.5rem;
   color: var(--text-2);
+  text-align: center;
+  justify-items: center;
+}
+
+@media (min-width: 769px) {
+  .footer-inner {
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+  }
+
+  .footer-inner > div:nth-child(1) {
+    order: 2;
+  }
+
+  .footer-inner > div:nth-child(2) {
+    order: 1;
+    justify-self: start;
+    text-align: left;
+  }
+
+  .footer-inner > div:nth-child(3) {
+    order: 3;
+    justify-self: end;
+    text-align: right;
+  }
 }
 
 .footer-inner strong {
@@ -744,8 +769,25 @@ a {
     justify-content: center;
   }
 
+  .header-inner {
+    padding: 0.6rem 0;
+    gap: 0.8rem;
+  }
+
+  .brand-logo {
+    width: min(52vw, 160px);
+  }
+
+  .nav {
+    gap: 0.8rem;
+  }
+
   .cta-button {
-    margin: 12px auto 0;
+    margin: 10px auto 0;
+  }
+
+  .site-header .cta-button {
+    display: none;
   }
 
   .hero-grid {

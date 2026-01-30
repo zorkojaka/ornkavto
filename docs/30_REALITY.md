@@ -1,40 +1,59 @@
-# AOS Audit Report (MVP)
+# AOS Reality Report
 
-## What this is
-This website is called 'ornkavto' and appears to represent the ornkavto website.
+## 1. Scope
+- Repository: zorkojaka/ornkavto
+- Branch: main
+- Analyzed commit: b08e730a3b7145a01320eedcd2ddc074cdf25256
+- Generated at: 2026-01-30T21:44:54.469Z
 
-## Site structure
-The structure cannot be fully determined from the available file. The only file is a README.md, which serves as a simple project description.
+## 2. High-level summary
+Repository contains static HTML entry page, CSS assets, PHP scripts. Summary is based only on detected files and fetched contents (no assumptions). README excerpt: # ornkavto ornkavto website
 
-## Backend
-UNKNOWN
+## 3. Detected structure
+### Frontend
+- Detected files:
+  - index.html
+  - assets/style.css
+  - assets/ornkavto-logo.png
+  - assets/peter-v-akciji.png
+  - assets/photos/debelina-laka.png
+  - assets/photos/debelina-laka2.png
+  - assets/photos/pogajanje-z-prodajalcem.png
+  - assets/photos/pogajanje-za-ceno.png
+  - assets/photos/pogajanje.png
+  - assets/photos/pregled-motorja.png
+  - assets/photos/pregled-napak.png
+  - assets/photos/pregled-olja.png
+  - assets/photos/pregled-serijske.png
+  - assets/photos/pregled-vozila.png
+- Notes:
+  - Based on detected HTML/CSS/assets. No assumptions beyond file presence/content.
 
-## Key claims (with evidence)
-- **C1**: The name of the project is 'ornkavto'.
-  - Evidence: ``
-- **C2**: It is for the ornkavto website.
-  - Evidence: ``
+### Backend
+- Detected files:
+  - send.php
+- Notes:
+  - Backend behavior is only asserted when supported by fetched file content.
 
-## Diagram: Architecture
-flowchart TB
-  User[Visitor] --> Browser[Browser]
-  Browser -->|loads| Index[index.html]
-  Index -->|styles| CSS[assets/style.css]
-  Index -->|submits form| PHP[send.php]
-  PHP -->|sends email| Email[(Mail server)]
-  Index -->|optional analytics| GA4[(Google Analytics 4)]
+### External services
+- Detected:
+  - NOT DETECTED
 
-## Diagram: Dataflow
-sequenceDiagram
-  participant U as User
-  participant I as index.html
-  participant P as send.php
-  participant M as Mail server
-  U->>I: Open website
-  I->>U: Render sections + form
-  U->>I: Submit contact form
-  I->>P: POST form data
-  P->>P: Validate + honeypot check
-  P->>M: Send email
-  P->>I: JSON {ok:true} / error
-  I->>U: Show success/error
+## 4. Factual flow
+- Browser loads index.html (static entry).
+- Styling assets detected (CSS: assets/style.css).
+
+## 5. Unknown / Not detected
+- Authentication: NOT DETECTED
+- Database: NOT DETECTED
+- Frameworks: NOT DETECTED
+- Hosting/deploy: UNKNOWN
+
+## 6. Evidence
+- file: README.md — evidence: Project description / purpose (README).
+- file: assets/ornkavto-logo.png — evidence: File present in repository snapshot (content not fetched).
+- file: assets/peter-v-akciji.png — evidence: File present in repository snapshot (content not fetched).
+
+## 7. Notes
+- Limitations:
+  - None detected beyond normal snapshot limitations.
